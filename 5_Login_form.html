@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registration form</title>
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+
+    <style>
+        body {
+            margin: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            background-color: gray;
+        }
+
+        .container {
+            border-radius: 5px;
+            color: black;
+            width: 350px;
+            height: 420px;
+            background-color: white;
+
+        }
+
+        .Sign-in form {
+            padding: 4px;
+            margin: 5px;
+        }
+
+        input {
+            border-radius: 5px;
+            padding: 12px;
+            line-height: 8px;
+            margin: 15px;
+            width: 280px;
+        }
+
+        a {
+            color: #167bfe;
+            padding: 10px;
+            margin: 10px;
+            text-decoration: none;
+            font-size: 18px;
+            text-align: left;
+        }
+
+        header {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bolder;
+            margin: 30px;
+        }
+
+        .button {
+            width: 308px;
+            margin: 15px;
+            padding: 12px;
+            font-size: 15px;
+            align-items: center;
+            color: white;
+            background-color: rgb(51, 131, 244);
+        }
+
+        .signup {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        label {
+            color: #167bfe;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="Sign-in form">
+            <header>Sign in </header>
+            <form action="#">
+                <input type="text" placeholder="Enter email">
+                <input type="password" placeholder="Enter password"><br>
+                <a href="#">Forgot password?</a><br><br>
+                <!-- <input type="checkbox" id="check"> -->
+                <input type="button" class="button" value="Login">
+            </form>
+            <div class="signup">
+                <span class="signup">Don't have an account?
+                    <label for="check">Signup</label>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

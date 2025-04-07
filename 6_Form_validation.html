@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+
+    <style>
+        body {
+            padding: 200px 600px;
+            background-color: gray;
+        }
+
+        #container {
+            text-align: center;
+            padding: 10px;
+            height: 320px;
+            width: 280px;
+            background-color: white;
+        }
+
+        h1 {
+            margin: 28px;
+            text-align: center;
+        }
+
+        .inp {
+            padding: 6px;
+            margin: 10px;
+            width: 200px;
+            border-radius: 2px;
+        }
+
+        #button {
+            padding: 6px;
+            margin: 15px;
+            width: 210px;
+            border-radius: 5px;
+            color: white;
+            background-color: blue;
+        }
+
+        .error {
+            color: red;
+            margin: 0px;
+            margin-left: 30px;
+            text-align: left;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="container">
+        <h1>Login</h1>
+        <form action="" onsubmit="return validationForm()">
+            <input type="text" placeholder="User name" class="inp" id="username"><br>
+            <p id="usererror" class="error"></p>
+            <input type="password" placeholder="Password" class="inp" id="password"><br>
+            <p id="passerror" class="error"></p>
+            <input type="submit" value="Submit" id="button">
+        </form>
+    </div>
+
+    <script>
+        let username = document.getElementById("username");
+        let password = document.getElementById("password");
+        let flag = 1;
+
+        function validationForm() {
+            if (username.value == "") {
+                document.getElementById("usererror").innerHTML = "User name is empty";
+                flag = 0;
+
+            } else if (username.value.length < 6) {
+                document.getElementById("usererror").innerHTML = "User name is require min 6 char";
+                flag = 0;
+
+            } else {
+                document.getElementById("usererror").innerHTML = "";
+                flag = 1;
+            }
+
+            if (password.value == "") {
+                document.getElementById("passerror").innerHTML = "User name is empty";
+                flag = 0;
+
+            } else {
+                document.getElementById("passerror").innerHTML = "";
+                flag = 1;
+            }
+            if (flag) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+
+    </script>
+
+</body>
+
+</html>
